@@ -18,12 +18,18 @@ const directories = {
 };
 const paths = {
   styles: {
+    src: [
+      directories.src + '/scss/*.scss',
+    ],
     vendor: [
       directories.node + '/foundation-sites/dist/css/foundation.css'
     ],
     dest: directories.dest + '/css'
   },
   scripts: {
+    src: [
+      directories.src + '/scripts/*.js',
+    ],
     vendor: [
       directories.node + '/jquery/dist/jquery.js',
       directories.node + '/foundation-sites/dist/js/foundation.js'
@@ -36,12 +42,6 @@ const paths = {
       directories.src + '/*.php'
     ],
     dest: directories.dest
-  },
-  json: {
-    src: [
-      directories.src + '/*.json'
-    ],
-    dest: directories.dest + '/json'
   },
   assets: {
     fonts: {
@@ -120,13 +120,6 @@ gulp.task('html', function() {
     // .pipe(notify({message: 'html task done'}));
 });
 
-// JSON task
-gulp.task('json', function() {
-  return gulp.src(paths.json.src)
-    .pipe(gulp.dest(paths.json.dest))
-    // .pipe(notify({message: 'json task done'}));
-});
-
 // Assets task
 gulp.task('assets:all', function() {
   return gulp.start('assets:fonts', 'assets:images', 'assets:svg');
@@ -151,10 +144,9 @@ gulp.task('assets:svg', function() {
 
 // Watch task
 gulp.task('watch', function() {
-  gulp.watch([paths.styles.src, directories.src + '/scss/*.scss'], ['css']);
-  gulp.watch([paths.scripts.src, directories.src + '/scripts/*.js'], ['js']);
+  gulp.watch([paths.styles.src], ['css']);
+  gulp.watch([paths.scripts.src], ['js']);
   gulp.watch([paths.html.src], ['html']);
-  gulp.watch([paths.json.src], ['json']);
   gulp.watch([paths.assets.fonts.src], ['assets:fonts']);
   gulp.watch([paths.assets.images.src], ['assets:images']);
   gulp.watch([paths.assets.svg.src], ['assets:svg']);
@@ -166,7 +158,6 @@ gulp.task('clean', function(cb) {
       paths.scripts.dest,
       directories.dest + '/*.html',
       directories.dest + '/*.php',
-      paths.json.dest,
       paths.assets.fonts.dest,
       paths.assets.images.dest,
       paths.assets.svg.dest
@@ -174,5 +165,5 @@ gulp.task('clean', function(cb) {
 });
 // Default task (Build)
 gulp.task('default', ['clean'], function() {
-  return gulp.start('css:all', 'js:all', 'html', 'json', 'assets:all');
+  return gulp.start('css:all', 'js:all', 'html', 'assets:all');
 });
