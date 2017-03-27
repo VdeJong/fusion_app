@@ -1,0 +1,20 @@
+$grid-column-count: 24;
+@import 'node_modules/foundation-sites/scss/foundation';
+@include foundation-global-styles;
+@include foundation-grid;
+@import 'node_modules/bourbon/app/assets/stylesheets/bourbon';
+
+@import 'mixins';
+$font-primary: 'Arial', 'Helvetica', sans-serif;
+$color-white: #FFF;
+$color-black: #000;
+@import 'typography';
+
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  outline: none;
+}
+body {
+  background: $color-white;
+  font-family: $font-primary;
+}
