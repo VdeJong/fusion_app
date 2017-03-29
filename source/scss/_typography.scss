@@ -1,6 +1,22 @@
 .body-font {
 }
 .header-title {
+  h1 {
+    text-align: center;
+    text-transform: uppercase;
+  }
 }
 .regular-title {
+
 }
+
+p {
+  line-height: 1;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+$font-size-s: 10px;
+$font-size-m: 13px;
+$font-size-l: 16px;
+$font-size-xl: 20px;
