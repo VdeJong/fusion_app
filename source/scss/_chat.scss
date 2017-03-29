@@ -1,0 +1,46 @@
+.chat-overview {
+  input {
+    margin-bottom: 0;
+  }
+}
+
+.message {
+  float: left;
+  width: 100%;
+  background-color: #cdcdcd;
+  border: 2px solid #d2d2d2;
+  padding: 15px 0 15px 0;
+
+  &:nth-child(even) {
+    .profile-image {
+      float: right;
+    }
+    .message-info {
+      .characters {
+        text-align: left;
+      }
+    }
+  }
+
+  .profile-image {
+    float: left;
+    padding-left: 10px;
+
+    .image {
+      width: 60px;
+      height: 60px;
+      border-radius: 30px;
+    }
+  }
+  .message-info {
+    float: left;
+    padding: 0 0 0 7px;
+    font-size: $font-size-m;
+
+    .characters {
+      font-weight: 600;
+      text-transform: uppercase;
+      text-align: right;
+    }
+  }
+}
