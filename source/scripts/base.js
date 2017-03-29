@@ -2,6 +2,19 @@ function init() {
   // Init Foundation
   $(document).foundation();
 
+  // Loginpage fadeOut/Overviewpage fadeIn
+  var loadDelay = 300;
+  $('#login').click(function(e) {
+    e.preventDefault();
+    $('.page.login').addClass('not-show');
+    $('.page.overview').removeClass('hide');
+
+    setTimeout(function() {
+      $('.page.login').addClass('hide');
+      $('.page.overview').removeClass('not-show');
+    }, loadDelay);
+  });
+
   // Character count message
   counter = function() {
     var value = $('#message').val();
