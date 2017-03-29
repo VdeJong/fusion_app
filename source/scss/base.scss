@@ -8,8 +8,10 @@ $grid-column-count: 24;
 $font-primary: 'Arial', 'Helvetica', sans-serif;
 $color-white: #FFF;
 $color-black: #000;
+$color-blue: #007AFF;
 @import 'typography';
 @import 'buttons';
+@import 'navbar';
 
 * {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);

@@ -6077,6 +6077,52 @@ pre {
   .fb-login:active {
     box-shadow: inset 0 0 0 32px rgba(0, 0, 0, 0.1); }
 
+.navbar {
+  width: 100%;
+  height: 62px;
+  display: block;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #FFF;
+  border-top: 1px solid #f7f7f7; }
+  .navbar ul {
+    list-style: none;
+    margin: 0;
+    text-align: center; }
+    .navbar ul li {
+      display: inline-block;
+      text-transform: uppercase;
+      width: 32.333%;
+      text-align: center;
+      padding: 5px 0 0; }
+      .navbar ul li .image {
+        position: relative;
+        display: inline-block; }
+        .navbar ul li .image .notifications {
+          display: block;
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          top: 3px;
+          left: -3px;
+          border-radius: 50%;
+          background: red;
+          border: 1px solid #FFF;
+          text-transform: uppercase;
+          text-align: center;
+          font-size: 11px;
+          color: #FFF; }
+        .navbar ul li .image img {
+          max-height: 35px;
+          margin-bottom: -4px; }
+      .navbar ul li span {
+        width: 100%;
+        display: inline-block;
+        text-transform: uppercase;
+        font-size: 11px;
+        color: #007AFF; }
+
 * {
   -webkit-tap-highlight-color: transparent;
   outline: none; }
