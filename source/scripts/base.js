@@ -28,3 +28,25 @@ $(document).ready(function() {
     $('#message').focus(counter);
   }
 });
+
+var loadDelay = 300;
+
+$('.chat').on('click', function () {
+    $('.chat-overview-section').addClass('not-slide-right');
+    $('.chat-detail-section').removeClass('hide');
+
+    setTimeout(function() {
+        $('.chat-overview-section').addClass('hide');
+        $('.chat-detail-section').removeClass('not-slide-right');
+    }, loadDelay);
+});
+
+$('.chat-detail-section-back').on('click', function () {
+    $('.chat-detail-section').addClass('hide');
+    $('.chat-overview-section').removeClass('not-slide-right');
+
+    setTimeout(function() {
+        $('.chat-detail-section').addClass('not-slide-right');
+        $('.chat-overview-section').removeClass('hide');
+    }, loadDelay);
+});

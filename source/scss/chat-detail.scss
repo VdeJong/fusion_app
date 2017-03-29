@@ -44,3 +44,17 @@
     }
   }
 }
+
+.chat-detail-section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  @include transition-property(left);
+  @include transition-duration(0.4s);
+  @include transition-timing-function($ease-out-quad);
+
+  &.not-slide-right {
+    left: 100%;
+  }
+}

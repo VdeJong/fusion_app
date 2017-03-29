@@ -6049,6 +6049,10 @@ pre {
   text-align: center;
   text-transform: uppercase; }
 
+.header-title h3 {
+  text-align: center;
+  text-transform: uppercase; }
+
 p {
   line-height: 1;
   margin-bottom: 0;
@@ -6166,7 +6170,8 @@ p {
   float: left;
   width: 100%;
   background-color: #cdcdcd;
-  padding: 15px 0 15px 0; }
+  padding: 15px 0 15px 0;
+  cursor: pointer; }
   .chat .chat-profile-image {
     float: left;
     padding-left: 10px; }
@@ -6187,6 +6192,52 @@ p {
         float: right; }
     .chat .chat-info .last-message {
       line-height: 1.3; }
+
+.chat-overview input {
+  margin-bottom: 0; }
+
+.message {
+  float: left;
+  width: 100%;
+  background-color: #cdcdcd;
+  border: 2px solid #d2d2d2;
+  padding: 15px 0 15px 0; }
+  .message:nth-child(even) .profile-image {
+    float: right; }
+  .message:nth-child(even) .message-info .characters {
+    text-align: left; }
+  .message .profile-image {
+    float: left;
+    padding-left: 10px; }
+    .message .profile-image .image {
+      width: 60px;
+      height: 60px;
+      border-radius: 30px; }
+  .message .message-info {
+    float: left;
+    padding: 0 0 0 7px;
+    font-size: 13px; }
+    .message .message-info .characters {
+      font-weight: 600;
+      text-transform: uppercase;
+      text-align: right; }
+
+.chat-detail-section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-transition-property: left;
+  -moz-transition-property: left;
+  transition-property: left;
+  -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -webkit-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -moz-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+  .chat-detail-section.not-slide-right {
+    left: 100%; }
 
 * {
   -webkit-tap-highlight-color: transparent;
