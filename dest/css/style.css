@@ -14,6 +14,7 @@
      * 3. Prevent adjustments of font size after orientation changes in
      *    IE on Windows Phone and in iOS.
      */
+@import url("https://fonts.googleapis.com/css?family=Oswald:300,400,500,700");
 html {
   font-family: sans-serif;
   /* 1 */
@@ -6058,6 +6059,214 @@ p {
   margin-bottom: 0;
   text-transform: uppercase; }
 
+/* Background */
+section.background {
+  position: fixed;
+  width: 100vw;
+  height: 64px;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: url("../images/background.jpg") no-repeat top center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  section.background:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #E63A74;
+    opacity: 0.9;
+    z-index: 1; }
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 64px;
+  z-index: 1; }
+  header .back-btn {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -18px; }
+    header .back-btn figure {
+      margin: 0;
+      padding: 10px 20px; }
+      header .back-btn figure img {
+        display: block;
+        width: auto;
+        height: 15px; }
+  header .row {
+    display: table;
+    height: 100%; }
+    header .row .inner-head {
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+      float: none; }
+      header .row .inner-head h1 {
+        font-family: "Oswald", sans-serif;
+        font-weight: 400;
+        color: #FFF;
+        font-size: 20px;
+        line-height: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin: 0; }
+      header .row .inner-head h3 {
+        font-family: "Oswald", sans-serif;
+        font-weight: 400;
+        color: #FFF;
+        font-size: 12px;
+        line-height: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin: 3px 0 0 0;
+        opacity: 0.5; }
+
+/* Content */
+section.content {
+  position: relative;
+  top: 64px;
+  margin-bottom: 50px;
+  width: 100%;
+  padding: 10px 0; }
+
+/* Navbar/menu */
+nav {
+  background: #FFF;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25); }
+  nav ul {
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    height: 100%; }
+    nav ul li {
+      width: 20vw;
+      height: 100%;
+      display: inline-block; }
+      nav ul li a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: auto 25px; }
+      nav ul li.home a {
+        background-image: url("../images/nav-home.png"); }
+      nav ul li.home.active a {
+        background-image: url("../images/nav-home-active.png"); }
+      nav ul li.chats a {
+        background-image: url("../images/nav-chats.png"); }
+      nav ul li.chats.active a {
+        background-image: url("../images/nav-chats-active.png"); }
+      nav ul li.games a {
+        background-image: url("../images/nav-games.png"); }
+      nav ul li.games.active a {
+        background-image: url("../images/nav-games-active.png"); }
+      nav ul li.matches a {
+        background-image: url("../images/nav-matches.png"); }
+      nav ul li.matches.active a {
+        background-image: url("../images/nav-matches-active.png"); }
+
+.page.overview {
+  opacity: 1;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -moz-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+  .page.overview.not-show {
+    opacity: 0; }
+
+.page.login {
+  padding: 25px;
+  display: table;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -moz-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+  .page.login.not-show {
+    opacity: 0; }
+  .page.login:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: url("../images/background.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    -webkit-filter: blur(4px);
+    -moz-filter: blur(4px);
+    -o-filter: blur(4px);
+    -ms-filter: blur(4px);
+    filter: blur(4px); }
+  .page.login .container {
+    display: table-cell;
+    vertical-align: middle; }
+    .page.login .container .logo {
+      max-width: 250px;
+      margin: 0 auto 75px; }
+    .page.login .container .login-form {
+      text-align: center; }
+      .page.login .container .login-form input {
+        border-radius: 2px;
+        font-size: 16px; }
+        .page.login .container .login-form input[type="submit"] {
+          box-sizing: border-box;
+          position: relative;
+          margin: 0;
+          padding: 0 15px;
+          border: none;
+          text-align: center;
+          width: 100%;
+          line-height: 34px;
+          white-space: nowrap;
+          border-radius: 2px;
+          font-size: 16px;
+          color: #FFF;
+          background-image: linear-gradient(#46c14f, #309e38);
+          text-shadow: 0 -1px 0 #309e38;
+          outline: none; }
+          .page.login .container .login-form input[type="submit"]:hover, .page.login .container .login-form input[type="submit"]:focus {
+            background-image: linear-gradient(#57d460, #35b13e); }
+          .page.login .container .login-form input[type="submit"]:active {
+            box-shadow: inset 0 0 0 32px rgba(0, 0, 0, 0.1); }
+
 .team {
   text-align: center;
   padding-bottom: 10px; }
@@ -6088,6 +6297,33 @@ p {
     .profile .profile-info .name-age {
       font-weight: 600; }
 
+.btn-wrap {
+  text-align: center; }
+
+.btn {
+  position: relative;
+  display: inline-block;
+  background: #E63A74;
+  width: 225px;
+  padding: 8px 20px 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  color: #FFF;
+  font-size: 18px;
+  line-height: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  text-align: center;
+  margin: 0; }
+  .btn:focus, .btn:hover {
+    color: #FFF; }
+  .btn.btn-grey {
+    background: #9C9C9C; }
+
+/* Facebook login button */
 .fb-login {
   box-sizing: border-box;
   position: relative;
@@ -6247,65 +6483,9 @@ html, body {
   height: 100%; }
 
 body {
-  background: #FFF;
-  font-family: "Arial", "Helvetica", sans-serif; }
+  background: #F2EEF3;
+  font-family: "Oswald", sans-serif; }
 
 .no-padding {
   padding-left: 0;
   padding-right: 0; }
-
-.page.login {
-  padding: 25px;
-  display: table;
-  width: 100%;
-  height: 100%; }
-  .page.login:before {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    background: url("../images/background.jpg") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    -webkit-filter: blur(4px);
-    -moz-filter: blur(4px);
-    -o-filter: blur(4px);
-    -ms-filter: blur(4px);
-    filter: blur(4px); }
-  .page.login .container {
-    display: table-cell;
-    vertical-align: middle; }
-    .page.login .container .logo {
-      max-width: 250px;
-      margin: 0 auto 75px; }
-    .page.login .container .login-form {
-      text-align: center; }
-      .page.login .container .login-form input {
-        border-radius: 2px;
-        font-size: 16px; }
-        .page.login .container .login-form input[type="submit"] {
-          box-sizing: border-box;
-          position: relative;
-          margin: 0;
-          padding: 0 15px;
-          border: none;
-          text-align: center;
-          width: 100%;
-          line-height: 34px;
-          white-space: nowrap;
-          border-radius: 2px;
-          font-size: 16px;
-          color: #FFF;
-          background-image: linear-gradient(#46c14f, #309e38);
-          text-shadow: 0 -1px 0 #309e38;
-          outline: none; }
-          .page.login .container .login-form input[type="submit"]:hover, .page.login .container .login-form input[type="submit"]:focus {
-            background-image: linear-gradient(#57d460, #35b13e); }
-          .page.login .container .login-form input[type="submit"]:active {
-            box-shadow: inset 0 0 0 32px rgba(0, 0, 0, 0.1); }

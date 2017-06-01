@@ -4,12 +4,16 @@ $grid-column-count: 24;
 @include foundation-grid;
 @import 'node_modules/bourbon/app/assets/stylesheets/bourbon';
 
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,500,700');
 @import 'mixins';
-$font-primary: 'Arial', 'Helvetica', sans-serif;
+$font-primary: 'Oswald', sans-serif;
 $color-white: #FFF;
 $color-black: #000;
+$color-pink: #E63A74;
 $color-blue: #007AFF;
 @import 'typography';
+@import 'components';
+
 @import 'login';
 @import 'profile';
 @import 'buttons';
@@ -25,9 +29,8 @@ $color-blue: #007AFF;
 html, body {
   height: 100%;
 }
-
 body {
-  background: $color-white;
+  background: #F2EEF3;
   font-family: $font-primary;
 }
 

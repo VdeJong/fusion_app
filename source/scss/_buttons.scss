@@ -1,4 +1,37 @@
-// Facebook login button
+.btn-wrap {
+  text-align: center;
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  background: $color-pink;
+  width: 225px;
+  padding: 8px 20px 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+
+  font-family: $font-primary;
+  font-weight: 400;
+  color: $color-white;
+  font-size: 18px;
+  line-height: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  text-align: center;
+  margin: 0;
+  &:focus,
+  &:hover {
+    color: $color-white;
+  }
+
+  &.btn-grey {
+    background: #9C9C9C;
+  }
+}
+
+/* Facebook login button */
 .fb-login {
   box-sizing: border-box;
   position: relative;
