@@ -1,28 +1,24 @@
 $grid-column-count: 24;
+
 @import 'node_modules/foundation-sites/scss/foundation';
+@import 'node_modules/bourbon/app/assets/stylesheets/bourbon';
 @include foundation-global-styles;
 @include foundation-grid;
-@import 'node_modules/bourbon/app/assets/stylesheets/bourbon';
-
 @import url('https://fonts.googleapis.com/css?family=Oswald:300,400,500,700');
 @import 'mixins';
-$font-primary: 'Oswald', sans-serif;
-$font-secondary: Helvetica, Arial, sans-serif;
-$color-white: #FFF;
-$color-black: #000;
-$color-pink: #E63A74;
-$color-gray: #9C9C9C;
-$color-darkgray: #383737;
-$color-blue: #007AFF;
+@import 'colors';
 @import 'typography';
 @import 'components';
 
+
+// components
 @import 'login';
 @import 'profile';
-@import 'buttons';
 @import 'navbar';
 @import 'chat';
+@import 'buttons';
 @import 'chat-detail';
+
 
 * {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);

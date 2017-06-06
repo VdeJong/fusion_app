@@ -218,6 +218,98 @@ section.content {
       }
     }
 
+    &.pop-up-block {
+      position: fixed;
+      top: calc(50% - 152px);
+      left: calc(50% - 132px);
+      width: auto;
+      border-radius: 5px;
+      padding: 20px 20px 10px 20px;
+
+      // TODO: Nest less deep, because of repetition
+      figure {
+        position: relative;
+        @include square(100%);
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 0;
+
+        img {
+          @include square(100%);
+          object-fit: cover;
+        }
+      }
+      .close {
+        position: absolute;
+        right: 0;
+        top: -30px;
+        color: $dark-gray;
+        font-size: 55px;
+      }
+      .image {
+        position: relative;
+        @include square(150px);
+        margin: 0 auto;
+
+        &.blur-20 {
+          img {
+            -webkit-filter: blur(8px);
+            -moz-filter: blur(8px);
+            -o-filter: blur(8px);
+            -ms-filter: blur(8px);
+            filter: blur(8px);
+          }
+        }
+      }
+      .information {
+        vertical-align: middle;
+        width: 100%;
+        text-align: center;
+        padding: 25px 0 25px 0;
+
+        h4 {
+          font-family: $font-primary;
+          font-weight: 400;
+          color: $color-pink;
+          font-size: 18px;
+          line-height: 18px;
+          text-transform: uppercase;
+          letter-spacing: -0.3px;
+          margin: 0 0 4px 0;
+        }
+        p {
+          font-weight: 300;
+          color: $color-gray;
+          font-size: 16px;
+          line-height: 16px;
+          text-transform: uppercase;
+          letter-spacing: -0.6px;
+          margin: 0;
+        }
+
+        .title {
+          float: left;
+          width: 100%;
+          margin: 0 0 7px 0;
+
+          h4 {
+            display: inline-block;
+            float: left;
+          }
+          .chars {
+            display: inline-block;
+            float: right;
+
+            p {
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
+
     .block-container {
       display: table;
       min-height: 70px;
