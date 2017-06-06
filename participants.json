@@ -1,0 +1,88 @@
+{
+  "men": [
+    {
+      "naam": "jijzelf",
+      "tekens": 1270,
+      "leeftijd": 18,
+      "afbeelding": "images/user-photo.jpg"
+    },
+    {
+      "naam": "robbin",
+      "tekens": 1120,
+      "leeftijd": 17,
+      "afbeelding": "images/user-photo.jpg"
+
+    },
+    {
+      "naam": "joris",
+      "tekens": 170,
+      "leeftijd": 17,
+      "afbeelding": "images/user-photo.jpg"
+
+    },
+    {
+      "naam": "diederik",
+      "tekens": 782,
+      "leeftijd": 16,
+      "afbeelding": "images/user-photo.jpg"
+    },
+    {
+      "naam": "jonathan",
+      "tekens": 1122,
+      "leeftijd": 18,
+      "afbeelding": "images/user-photo.jpg"
+
+    },
+    {
+      "naam": "pieter",
+      "tekens": 112,
+      "leeftijd": 18,
+      "afbeelding": "images/user-photo.jpg"
+
+    }
+  ],
+  "women": [
+    {
+      "naam": "josefien",
+      "tekens": 1277,
+      "leeftijd": 16,
+      "afbeelding": "images/user-photo.jpg"
+
+    },
+    {
+      "naam": "madeleine",
+      "tekens": 1990,
+      "leeftijd": 17,
+      "afbeelding": "images/user-photo.jpg"
+
+    },
+    {
+      "naam": "sofie",
+      "tekens": 1703,
+      "leeftijd": 16,
+      "afbeelding": "images/user-photo.jpg"
+
+    },
+    {
+      "naam": "emma",
+      "tekens": 882,
+      "leeftijd": 18,
+      "afbeelding": "images/user-photo.jpg"
+
+    },
+    {
+      "naam": "lisa",
+      "tekens": 1553,
+      "leeftijd": 16,
+      "afbeelding": "images/user-photo.jpg"
+
+    },
+    {
+      "naam": "marissa",
+      "tekens": 112,
+      "leeftijd": 17,
+      "afbeelding": "images/user-photo.jpg"
+
+    }
+  ]
+}
