@@ -6145,7 +6145,7 @@ section.content {
     section.content .team-selection.left-active .divider:before {
       left: 0; }
     section.content .team-selection.right-active .divider:before {
-      right: 0; }
+      left: 50%; }
     section.content .team-selection ul {
       margin: 0;
       list-style: none;
@@ -6201,6 +6201,8 @@ section.content {
     padding: 10px 10px 10px 20px; }
     section.content .block:first-child {
       margin: 0; }
+    section.content .block.user-block {
+      padding-right: 60px; }
     section.content .block.chat-block {
       margin-top: 3px; }
     section.content .block.matchup-block {
@@ -6424,6 +6426,12 @@ section.content {
           text-transform: uppercase;
           letter-spacing: -0.3px;
           margin: 0 0 4px 0; }
+          section.content .block .block-container .information h4 span img {
+            position: relative;
+            vertical-align: top;
+            height: 12px;
+            top: 3px;
+            margin-left: 3px; }
         section.content .block .block-container .information p {
           font-weight: 300;
           color: #9C9C9C;
@@ -6482,6 +6490,36 @@ section.content {
               text-transform: uppercase;
               letter-spacing: 0;
               margin: 0; }
+      section.content .block .block-container .open-chat {
+        display: block;
+        position: absolute;
+        top: 50%;
+        margin-top: -13px;
+        right: 20px; }
+        section.content .block .block-container .open-chat img {
+          height: 24px; }
+        section.content .block .block-container .open-chat .count-messages {
+          display: block;
+          position: absolute;
+          top: -8px;
+          right: -8px;
+          width: 24px;
+          height: 24px;
+          background: #E63A74;
+          border: 1px solid #FFF;
+          margin: 0;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          border-radius: 50%;
+          z-index: 1;
+          font-family: "Oswald", sans-serif;
+          font-weight: 400;
+          color: #FFF;
+          font-size: 12px;
+          line-height: 22px;
+          text-transform: uppercase;
+          text-align: center;
+          letter-spacing: -0.6px; }
     section.content .block .matches-container {
       clear: both;
       width: calc(100% + 25px); }
@@ -6521,6 +6559,7 @@ nav {
   position: fixed;
   bottom: 0;
   left: 0;
+  z-index: 5;
   width: 100%;
   height: 50px;
   -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
@@ -6532,7 +6571,7 @@ nav {
     text-align: center;
     height: 100%; }
     nav ul li {
-      width: 20vw;
+      width: 30vw;
       height: 100%;
       display: inline-block; }
       nav ul li a {

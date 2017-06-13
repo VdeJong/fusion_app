@@ -4,41 +4,49 @@
       "naam": "jijzelf",
       "tekens": 1270,
       "leeftijd": 18,
-      "afbeelding": "images/user-photo.jpg"
+      "afbeelding": "images/user-photo.jpg",
+      "blur": 20,
+      "status": "heart"
     },
     {
       "naam": "robbin",
       "tekens": 1120,
       "leeftijd": 17,
-      "afbeelding": "images/user-photo.jpg"
-
+      "afbeelding": "images/user-photo.jpg",
+      "blur": 0,
+      "status": "heart"
     },
     {
       "naam": "joris",
       "tekens": 170,
       "leeftijd": 17,
-      "afbeelding": "images/user-photo.jpg"
-
+      "afbeelding": "images/user-photo.jpg",
+      "blur": 10,
+      "status": "heart"
     },
     {
       "naam": "diederik",
       "tekens": 782,
       "leeftijd": 16,
-      "afbeelding": "images/user-photo.jpg"
+      "afbeelding": "images/user-photo.jpg",
+      "blur": 30,
+      "status": "heart"
     },
     {
       "naam": "jonathan",
       "tekens": 1122,
       "leeftijd": 18,
-      "afbeelding": "images/user-photo.jpg"
-
+      "afbeelding": "images/user-photo.jpg",
+      "blur": 20,
+      "status": "heart"
     },
     {
       "naam": "pieter",
       "tekens": 112,
       "leeftijd": 18,
-      "afbeelding": "images/user-photo.jpg"
-
+      "afbeelding": "images/user-photo.jpg",
+      "blur": 10,
+      "status": "heart"
     }
   ],
   "women": [
@@ -46,43 +54,61 @@
       "naam": "josefien",
       "tekens": 1277,
       "leeftijd": 16,
-      "afbeelding": "images/user-photo.jpg"
-
+      "afbeelding": "images/user-photo2.jpg",
+      "blur": 10,
+      "status": "heart",
+      "hideCount": "",
+      "messages": 1
     },
     {
       "naam": "madeleine",
       "tekens": 1990,
       "leeftijd": 17,
-      "afbeelding": "images/user-photo.jpg"
-
+      "afbeelding": "images/user-photo2.jpg",
+      "blur": 0,
+      "status": "heart",
+      "hideCount": "hide",
+      "messages": 0
     },
     {
       "naam": "sofie",
       "tekens": 1703,
       "leeftijd": 16,
-      "afbeelding": "images/user-photo.jpg"
-
+      "afbeelding": "images/user-photo2.jpg",
+      "blur": 0,
+      "status": "heart",
+      "hideCount": "",
+      "messages": 3
     },
     {
       "naam": "emma",
       "tekens": 882,
       "leeftijd": 18,
-      "afbeelding": "images/user-photo.jpg"
-
+      "afbeelding": "images/user-photo2.jpg",
+      "blur": 20,
+      "status": "heart",
+      "hideCount": "hide",
+      "messages": 0
     },
     {
       "naam": "lisa",
       "tekens": 1553,
       "leeftijd": 16,
-      "afbeelding": "images/user-photo.jpg"
-
+      "afbeelding": "images/user-photo2.jpg",
+      "blur": 30,
+      "status": "heart",
+      "hideCount": "hide",
+      "messages": 0
     },
     {
       "naam": "marissa",
       "tekens": 112,
       "leeftijd": 17,
-      "afbeelding": "images/user-photo.jpg"
-
+      "afbeelding": "images/user-photo2.jpg",
+      "blur": 10,
+      "status": "heart",
+      "hideCount": "hide",
+      "messages": 0
     }
   ]
 }

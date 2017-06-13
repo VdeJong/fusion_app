@@ -102,7 +102,8 @@ section.content {
     &.right-active {
       .divider {
         &:before {
-          right: 0;
+          // right: 0;
+          left: 50%;
         }
       }
     }
@@ -176,6 +177,9 @@ section.content {
       margin: 0;
     }
 
+    &.user-block {
+      padding-right: 60px;
+    }
     &.chat-block {
       margin-top: 3px;
     }
@@ -460,6 +464,16 @@ section.content {
           text-transform: uppercase;
           letter-spacing: -0.3px;
           margin: 0 0 4px 0;
+
+          span {
+            img {
+              position: relative;
+              vertical-align: top;
+              height: 12px;
+              top: 3px;
+              margin-left: 3px;
+            }
+          }
         }
         p {
           font-weight: 300;
@@ -538,6 +552,38 @@ section.content {
           }
         }
       }
+      .open-chat {
+        @include block(absolute);
+        top: 50%;
+        margin-top: -13px;
+        right: 20px;
+
+        img {
+          height: 24px;
+        }
+        .count-messages {
+          @include block(absolute);
+          top: -8px;
+          right: -8px;
+          @include square(24px);
+          background: $color-pink;
+          border: 1px solid $color-white;
+          margin: 0;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          border-radius: 50%;
+          z-index: 1;
+
+          font-family: $font-primary;
+          font-weight: 400;
+          color: $color-white;
+          font-size: 12px;
+          line-height: 22px;
+          text-transform: uppercase;
+          text-align: center;
+          letter-spacing: -0.6px;
+        }
+      }
     }
     .matches-container {
       clear: both;
@@ -592,6 +638,7 @@ nav {
   position: fixed;
   bottom: 0;
   left: 0;
+  z-index: 5;
   @include size(100%, 50px);
   -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
@@ -604,7 +651,7 @@ nav {
     height: 100%;
 
     li {
-      @include size(20vw, 100%);
+      @include size(30vw, 100%);
       display: inline-block;
 
       a {

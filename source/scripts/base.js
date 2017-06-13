@@ -32,16 +32,17 @@ function init() {
     // function to get participants from .json file
     $.getJSON('../participants.json', function (data) {
         $.each(data.men, function (i, f) {
-            var userBlock = '<div class="block user-block"><div class="block-container"><div class="image blur-20"><figure><img src="'+ f.afbeelding + '" alt=""></figure></div><div class="information"><h4>' + f.naam +' (' + f.leeftijd + ' jaar)' + '</h4><p>' + f.tekens + ' tekens </p></div></div></div>';
+            // var userBlock = '<div class="block user-block"><div class="block-container"><div class="image blur-20"><figure><img src="'+ f.afbeelding + '" alt=""></figure></div><div class="information"><h4>' + f.naam +' (' + f.leeftijd + ' jaar)' + '</h4><p>' + f.tekens + ' tekens </p></div></div></div>';
+            var userBlock = '<div class="block user-block"><div class="block-container"><div class="image blur-'+ f.blur +'"><figure><img src="'+ f.afbeelding +'" alt=""></figure></div><div class="information"><h4>'+ f.naam +' ('+ f.leeftijd +' jaar) <span><img src="images/block-'+ f.status +'.png" alt=""></span></h4><p>'+ f.tekens +' tekens</p></div></div></div>';
 
             $(userBlock).appendTo(".men-user-blocks");
         });
         $.each(data.women, function (i, f) {
-            var userBlock = '<div class="block user-block"><div class="block-container"><div class="image blur-20"><figure><img src="'+ f.afbeelding + '" alt=""></figure></div><div class="information"><h4>' + f.naam + ' (' + f.leeftijd + ' jaar)' + '</h4><p>' + f.tekens + ' tekens </p></div></div></div>';
+            // var userBlock = '<div class="block user-block"><div class="block-container"><div class="image blur-20"><figure><img src="'+ f.afbeelding + '" alt=""></figure></div><div class="information"><h4>' + f.naam + ' (' + f.leeftijd + ' jaar)' + '</h4><p>' + f.tekens + ' tekens </p></div></div></div>';
+            var userBlock = '<div class="block user-block"><div class="block-container"><div class="image blur-'+ f.blur +'"><figure><img src="'+ f.afbeelding +'" alt=""></figure></div><div class="information"><h4>'+ f.naam +' ('+ f.leeftijd +' jaar) <span><img src="images/block-'+ f.status +'.png" alt=""></span></h4><p>'+ f.tekens +' tekens</p></div><div class="open-chat"><a href="#"><img src="images/block-chat.png" alt=""><div class="count-messages '+ f.hideCount +'">'+ f.messages +'</div></a></div></div></div>';
 
             $(userBlock).appendTo(".women-user-blocks");
         })
-
     });
 }
 init();
