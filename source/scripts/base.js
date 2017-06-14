@@ -27,7 +27,15 @@ function init() {
         var regex = /\s+/gi;
         var totalChars = value.length;
         $('#totalChars').html(totalChars);
-    }
+    };
+
+
+    // close pop-up
+    $('.close').on('click', function () {
+       $(this).parent().parent().addClass('hide');
+    });
+
+
 
     // function to get participants from .json file
     $.getJSON('../participants.json', function (data) {

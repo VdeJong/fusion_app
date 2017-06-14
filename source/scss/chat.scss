@@ -1,37 +1,56 @@
-.chat {
-  float: left;
-  width: 100%;
-  background-color: #cdcdcd;
-  padding: 15px 0 15px 0;
-  cursor: pointer;
+.chat-block {
+  // TODO: remove, test purposes only
+  background: lightpink !important;
 
-  .chat-profile-image {
-    float: left;
-    padding-left: 10px;
-    .image {
-      width: 60px;
-      height: 60px;
-      border-radius: 30px;
-    }
-  }
-  .chat-info {
-    float: left;
+  .user-chat {
     width: 100%;
-    font-size: $font-size-m;
-    padding-right: 10px;
+    overflow: auto;
+    padding: 20px 0 20px 0;
 
-    .name-age {
-      font-weight: 600;
-      width: 100%;
-      padding-bottom: 12px;
+    .image {
+      width: 50px !important;
+      height: 50px !important;
+    }
+
+    .text {
+      max-width: 75%;
+      background-color: white;
+      border: 12px solid white;
+      border-radius: 10px;
+
+      p {
+        float: left;
+        max-width: 85%;
+        text-transform: none;
+        font-weight: 300;
+        line-height: 1.2;
+      }
 
       span {
         float: right;
+        margin-top: -4px;
+        color: $color-pink;
+        font-size: 16px;
       }
     }
+  }
 
-    .last-message {
-      line-height: 1.3;
+  .user-a {
+    .image {
+      float: left;
+    }
+    .text {
+      float: left;
+    }
+  }
+
+  .user-b {
+    .image {
+      float: right;
+    }
+    .text {
+      float: right;
+      margin-right: 20px;
     }
   }
 }

@@ -6756,32 +6756,40 @@ nav {
         font-size: 11px;
         color: #007AFF; }
 
-.chat {
-  float: left;
-  width: 100%;
-  background-color: #cdcdcd;
-  padding: 15px 0 15px 0;
-  cursor: pointer; }
-  .chat .chat-profile-image {
-    float: left;
-    padding-left: 10px; }
-    .chat .chat-profile-image .image {
-      width: 60px;
-      height: 60px;
-      border-radius: 30px; }
-  .chat .chat-info {
-    float: left;
+.chat-block {
+  background: lightpink !important; }
+  .chat-block .user-chat {
     width: 100%;
-    font-size: 13px;
-    padding-right: 10px; }
-    .chat .chat-info .name-age {
-      font-weight: 600;
-      width: 100%;
-      padding-bottom: 12px; }
-      .chat .chat-info .name-age span {
-        float: right; }
-    .chat .chat-info .last-message {
-      line-height: 1.3; }
+    overflow: auto;
+    padding: 20px 0 20px 0; }
+    .chat-block .user-chat .image {
+      width: 50px !important;
+      height: 50px !important; }
+    .chat-block .user-chat .text {
+      max-width: 75%;
+      background-color: white;
+      border: 12px solid white;
+      border-radius: 10px; }
+      .chat-block .user-chat .text p {
+        float: left;
+        max-width: 85%;
+        text-transform: none;
+        font-weight: 300;
+        line-height: 1.2; }
+      .chat-block .user-chat .text span {
+        float: right;
+        margin-top: -4px;
+        color: #E63A74;
+        font-size: 16px; }
+  .chat-block .user-a .image {
+    float: left; }
+  .chat-block .user-a .text {
+    float: left; }
+  .chat-block .user-b .image {
+    float: right; }
+  .chat-block .user-b .text {
+    float: right;
+    margin-right: 20px; }
 
 .btn-wrap {
   text-align: center; }
@@ -6845,6 +6853,9 @@ nav {
     background-image: linear-gradient(#5B7BD5, #4864B1); }
   .fb-login:active {
     box-shadow: inset 0 0 0 32px rgba(0, 0, 0, 0.1); }
+
+.close:hover {
+  cursor: pointer; }
 
 .chat-overview input {
   margin-bottom: 0; }
