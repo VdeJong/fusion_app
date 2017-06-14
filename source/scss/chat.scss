@@ -54,3 +54,16 @@
     }
   }
 }
+
+.chat-input-block {
+  .user-input {
+    #totalChars {
+      color: $color-darkgray;
+      padding-bottom: 5px;
+    }
+    #message {
+      width: 80%;
+      border-radius: 5px;
+    }
+  }
+}

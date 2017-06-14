@@ -2,8 +2,10 @@ function init() {
     // Init Foundation
     $(document).foundation();
 
-    // Loginpage fadeOut/Overviewpage fadeIn
-    var loadDelay = 300;
+    // GLOBALS
+    var $message = $('#message'),
+        loadDelay = 300;
+
     $('#login').click(function (e) {
         e.preventDefault();
         $('.page.login').addClass('not-show');
@@ -17,37 +19,39 @@ function init() {
 
     // Character count message
     counter = function () {
-        var value = $('#message').val();
+        var $totalChars = $('#totalChars'),
+            charCount = $message.val(),
+            availableChars = $message.data("input-max"),
+            totalCharsLeft;
 
-        if (value.length == 0) {
-            $('#totalChars').html(0);
-            return;
+        if (charCount.length == 0) {
+            totalCharsLeft = availableChars;
+        }
+        else {
+            totalCharsLeft = (availableChars - charCount.length);
         }
 
-        var regex = /\s+/gi;
-        var totalChars = value.length;
-        $('#totalChars').html(totalChars);
+        $totalChars.html(totalCharsLeft + ' tekens over');
     };
 
 
     // close pop-up
     $('.close').on('click', function () {
-       $(this).parent().parent().addClass('hide');
+        $(this).parent().parent().addClass('hide');
     });
-
 
 
     // function to get participants from .json file
     $.getJSON('../participants.json', function (data) {
         $.each(data.men, function (i, f) {
             // var userBlock = '<div class="block user-block"><div class="block-container"><div class="image blur-20"><figure><img src="'+ f.afbeelding + '" alt=""></figure></div><div class="information"><h4>' + f.naam +' (' + f.leeftijd + ' jaar)' + '</h4><p>' + f.tekens + ' tekens </p></div></div></div>';
-            var userBlock = '<div class="block user-block"><div class="block-container"><div class="image blur-'+ f.blur +'"><figure><img src="'+ f.afbeelding +'" alt=""></figure></div><div class="information"><h4>'+ f.naam +' ('+ f.leeftijd +' jaar) <span><img src="images/block-'+ f.status +'.png" alt=""></span></h4><p>'+ f.tekens +' tekens</p></div></div></div>';
+            var userBlock = '<div class="block user-block"><div class="block-container"><div class="image blur-' + f.blur + '"><figure><img src="' + f.afbeelding + '" alt=""></figure></div><div class="information"><h4>' + f.naam + ' (' + f.leeftijd + ' jaar) <span><img src="images/block-' + f.status + '.png" alt=""></span></h4><p>' + f.tekens + ' tekens</p></div></div></div>';
 
             $(userBlock).appendTo(".men-user-blocks");
         });
         $.each(data.women, function (i, f) {
             // var userBlock = '<div class="block user-block"><div class="block-container"><div class="image blur-20"><figure><img src="'+ f.afbeelding + '" alt=""></figure></div><div class="information"><h4>' + f.naam + ' (' + f.leeftijd + ' jaar)' + '</h4><p>' + f.tekens + ' tekens </p></div></div></div>';
-            var userBlock = '<div class="block user-block"><div class="block-container"><div class="image blur-'+ f.blur +'"><figure><img src="'+ f.afbeelding +'" alt=""></figure></div><div class="information"><h4>'+ f.naam +' ('+ f.leeftijd +' jaar) <span><img src="images/block-'+ f.status +'.png" alt=""></span></h4><p>'+ f.tekens +' tekens</p></div><div class="open-chat"><a href="#"><img src="images/block-chat.png" alt=""><div class="count-messages '+ f.hideCount +'">'+ f.messages +'</div></a></div></div></div>';
+            var userBlock = '<div class="block user-block"><div class="block-container"><div class="image blur-' + f.blur + '"><figure><img src="' + f.afbeelding + '" alt=""></figure></div><div class="information"><h4>' + f.naam + ' (' + f.leeftijd + ' jaar) <span><img src="images/block-' + f.status + '.png" alt=""></span></h4><p>' + f.tekens + ' tekens</p></div><div class="open-chat"><a href="#"><img src="images/block-chat.png" alt=""><div class="count-messages ' + f.hideCount + '">' + f.messages + '</div></a></div></div></div>';
 
             $(userBlock).appendTo(".women-user-blocks");
         })
@@ -56,17 +60,18 @@ function init() {
 init();
 
 $(document).ready(function () {
-    if ($('#message')) {
-        $('#message').change(counter);
-        $('#message').keydown(counter);
-        $('#message').keypress(counter);
-        $('#message').keyup(counter);
-        $('#message').blur(counter);
-        $('#message').focus(counter);
+    var $message = $('#message');
+
+    if ($message) {
+        $message.change(counter);
+        $message.keydown(counter);
+        $message.keypress(counter);
+        $message.keyup(counter);
+        $message.blur(counter);
+        $message.focus(counter);
     }
 });
 
-var loadDelay = 300;
 
 $('.chat').on('click', function () {
     $('.chat-overview-section').addClass('not-slide-right');

@@ -6791,6 +6791,14 @@ nav {
     float: right;
     margin-right: 20px; }
 
+.chat-input-block .user-input #totalChars {
+  color: #383737;
+  padding-bottom: 5px; }
+
+.chat-input-block .user-input #message {
+  width: 80%;
+  border-radius: 5px; }
+
 .btn-wrap {
   text-align: center; }
 
