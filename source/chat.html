@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fusion App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge; chrome=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
+</head>
+<body>
+
+  <section class="background"></section>
+  <header>
+    <div class="back-btn">
+        <a href="index.html">
+          <figure>
+            <img src="images/arrow-back.png" alt="">
+          </figure>
+        </a>
+    </div>
+    <div class="row">
+      <div class="columns inner-head">
+        <h1>Sofie</h1>
+        <h3>4701 tekens verwisseld</h3>
+      </div>
+    </div>
+  </header>
+
+  <section class="content chat-content">
+    <div class="row">
+      <div class="block chat-block">
+        <div class="block-container">
+          <div class="user-chat user-a">
+            <div class="image">
+              <figure>
+                <img src="images/user-sofie.png" alt="">
+              </figure>
+            </div>
+            <div class="text">
+              <p>Van welke muziek hou je?</p>
+              <span class="text-char">25</span>
+            </div>
+          </div>
+          <div class="user-chat user-b">
+            <div class="text">
+              <p>Hou van hip-hop/R&B. Fan van Eminem & Drake. Luister ook naar techno/house soms: Carl Cox & Paul Kalkbrenner</p>
+              <span class="text-char">111</span>
+            </div>
+            <div class="image">
+              <figure>
+                <img src="images/user-me.png" alt="">
+              </figure>
+            </div>
+          </div>
+          <div class="user-chat user-a">
+            <div class="image">
+              <figure>
+                <img src="images/user-sofie.png" alt="">
+              </figure>
+            </div>
+            <div class="text">
+              <p>Nice! Hou ook van techno: Paul K. Hou ook van hardstyle. Luister vaak Brennan Heart, Frontliner en Headhunterz</p>
+              <span class="text-char">109</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block chat-input-block">
+        <div class="user-input">
+          <p id="totalChars"></p>
+          <input type="text" id="message" max="300" data-input-max="300"/>
+          <a class="send-message" href="#"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="block pop-up-block pop-up-sofie not-show">
+      <div class="pop-up-container">
+        <a class="close" href="#">&times;</a>
+        <div class="image blur-0">
+          <figure>
+            <img src="images/user-sofie.png" alt="">
+          </figure>
+        </div>
+        <div class="information">
+          <h4>Sofie (16 jaar)</h4>
+          <p>Heeft deze week jou als match gekozen!</p>
+        </div>
+        <div class="btn-wrap">
+          <a class="btn" href="matches.html">Accepteer</a>
+          <a class="btn btn-grey" href="#">Kies een andere match</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<script src="js/vendor.min.js"></script>
+<script src="js/script.min.js"></script>
+</body>
+</html>

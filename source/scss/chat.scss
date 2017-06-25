@@ -1,11 +1,33 @@
 .chat-block {
-  // TODO: remove, test purposes only
-  background: lightpink !important;
+  // background: lightpink !important;
+  height: calc(100vh - 157px);
+  background: url('../images/background.jpg') no-repeat top center fixed !important;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  &:before {
+    content: '';
+    @include block(absolute);
+    @include square(100%);
+    top: 0;
+    left: 0;
+    background: #DCDCDC;
+    opacity: 0.9;
+    z-index: 1;
+  }
 
+  .block-container {
+    position: relative;
+    z-index: 2;
+  }
   .user-chat {
     width: 100%;
     overflow: auto;
-    padding: 20px 0 20px 0;
+    padding: 10px 0 0 0;
+    &:first-child {
+      padding: 0;
+    }
 
     .image {
       width: 50px !important;
@@ -13,10 +35,17 @@
     }
 
     .text {
+      width: 100%;
       max-width: 75%;
       background-color: white;
       border: 12px solid white;
       border-radius: 10px;
+      -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+      -moz-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+      box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+      @include breakpoint(321px) {
+        max-width: 79%;
+      }
 
       p {
         float: left;
@@ -25,7 +54,6 @@
         font-weight: 300;
         line-height: 1.2;
       }
-
       span {
         float: right;
         margin-top: -4px;
@@ -46,24 +74,52 @@
 
   .user-b {
     .image {
-      float: right;
+      float: left;
+      margin: 0 !important;
     }
     .text {
-      float: right;
+      float: left;
       margin-right: 20px;
     }
   }
 }
 
-.chat-input-block {
-  .user-input {
-    #totalChars {
-      color: $color-darkgray;
-      padding-bottom: 5px;
-    }
-    #message {
-      width: 80%;
-      border-radius: 5px;
+section.content .block {
+  &.chat-input-block {
+    margin: 0;
+    padding: 0;
+    min-height: auto;
+
+    .user-input {
+      background: #F2EEF3;
+      padding: 20px;
+      float: left;
+      width: 100%;
+
+      #totalChars {
+        color: #9C9C9C;
+        padding-bottom: 7px;
+      }
+      #message {
+        float: left;
+        // width: 80%;
+        width: calc(100% - 45px);
+        height: 30px;
+        border-radius: 5px;
+        display: inline-block;
+        margin-bottom: 0;
+        color: $color-darkgray;
+        border: none;
+      }
+      .send-message {
+        position: relative;
+        display: inline-block;
+        float: right;
+        height: 30px;
+        width: 30px;
+        background: url('../images/send-icon.png') no-repeat;
+        background-size: 30px 30px;
+      }
     }
   }
 }

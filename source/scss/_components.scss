@@ -88,6 +88,10 @@ section.content {
   margin-bottom: 50px;
   width: 100%;
   padding: 10px 0;
+  &.chat-content {
+    margin-bottom: 0;
+    padding: 0;
+  }
 
   .team-selection {
     background: $color-white;
@@ -119,33 +123,33 @@ section.content {
         @include breakpoint(large) {
           width: 49.25%;
         }
+        height: auto;
         display: inline-block;
         text-align: center;
         float: right;
+        opacity: 1;
+        border-radius: 0;
+        background: none;
+        padding: 10px 0;
         &:first-child {
           float: left;
         }
 
-        a {
-          display: block;
-          padding: 10px 0;
-
-          img {
-            position: relative;
-            top: -2px;
-            width: 14px;
-            height: auto;
-            margin-right: 9px;
-          }
-          span {
-            font-weight: 400;
-            color: $color-gray;
-            font-size: 17px;
-            line-height: 17px;
-            text-transform: uppercase;
-            letter-spacing: 0;
-            margin: 0;
-          }
+        img {
+          position: relative;
+          top: -2px;
+          width: 14px;
+          height: auto;
+          margin-right: 9px;
+        }
+        span {
+          font-weight: 400;
+          color: $color-gray;
+          font-size: 17px;
+          line-height: 17px;
+          text-transform: uppercase;
+          letter-spacing: 0;
+          margin: 0;
         }
       }
     }
@@ -161,6 +165,9 @@ section.content {
         width: 50%;
         height: 100%;
         background: $color-pink;
+        @include transition-property(left);
+        @include transition-duration(0.6s);
+        @include transition-timing-function($ease-out-quad);
       }
     }
   }
@@ -179,13 +186,19 @@ section.content {
 
     &.user-block {
       padding-right: 60px;
+      width: auto;
+      min-height: 70px;
     }
     &.chat-block {
-      margin-top: 3px;
+      // margin-top: 3px;
     }
     &.matchup-block {
       padding-right: 45px;
+
       &.open {
+        .matches-container {
+          display: block;
+        }
         &:after {
           transform: rotate(180deg);
         }
@@ -223,12 +236,30 @@ section.content {
     }
 
     &.pop-up-block {
+      &.pop-up-sofie {
+        top: 50%;
+        left: 50%;
+        @include transform(translate(-50%, -50%));
+      }
       position: fixed;
       top: calc(50% - 152px);
       left: calc(50% - 132px);
       width: auto;
       border-radius: 5px;
       padding: 20px 20px 10px 20px;
+      z-index: 10;
+      -webkit-box-shadow: 0 0 9999px 0 rgba(0, 0, 0, 0.25);
+      -moz-box-shadow: 0 0 9999px 0 rgba(0, 0, 0, 0.25);
+      box-shadow: 0 0 9999px 0 rgba(0, 0, 0, 0.25);
+      opacity: 1;
+      visibility: visible;
+      @include transition-property(opacity, visibility);
+      @include transition-duration(0.3s);
+      @include transition-timing-function($ease-out-quad);
+      &.not-show {
+        opacity: 0;
+        visibility: hidden;
+      }
 
       // TODO: Nest less deep, because of repetition
       figure {
@@ -247,8 +278,8 @@ section.content {
       }
       .close {
         position: absolute;
-        right: 0;
-        top: -30px;
+        right: 5px;
+        top: -25px;
         color: $dark-gray;
         font-size: 55px;
       }
@@ -257,6 +288,20 @@ section.content {
         @include square(150px);
         margin: 0 auto;
 
+        img {
+          @include transition-property(filter);
+          @include transition-duration(0.6s);
+          @include transition-timing-function($ease-out-quad);
+        }
+        &.blur-10 {
+          img {
+            -webkit-filter: blur(4px);
+            -moz-filter: blur(4px);
+            -o-filter: blur(4px);
+            -ms-filter: blur(4px);
+            filter: blur(4px);
+          }
+        }
         &.blur-20 {
           img {
             -webkit-filter: blur(8px);
@@ -264,6 +309,24 @@ section.content {
             -o-filter: blur(8px);
             -ms-filter: blur(8px);
             filter: blur(8px);
+          }
+        }
+        &.blur-30 {
+          img {
+            -webkit-filter: blur(12px);
+            -moz-filter: blur(12px);
+            -o-filter: blur(12px);
+            -ms-filter: blur(12px);
+            filter: blur(12px);
+          }
+        }
+        &.blur-40 {
+          img {
+            -webkit-filter: blur(16px);
+            -moz-filter: blur(16px);
+            -o-filter: blur(16px);
+            -ms-filter: blur(16px);
+            filter: blur(16px);
           }
         }
       }
@@ -322,6 +385,12 @@ section.content {
         position: relative;
         @include square(70px);
         margin: 0 20px 0 0;
+
+        img {
+          @include transition-property(filter);
+          @include transition-duration(0.6s);
+          @include transition-timing-function($ease-out-quad);
+        }
         &.blur-10 {
           img {
             -webkit-filter: blur(4px);
@@ -469,8 +538,8 @@ section.content {
             img {
               position: relative;
               vertical-align: top;
-              height: 12px;
-              top: 3px;
+              height: 16px;
+              top: 2px;
               margin-left: 3px;
             }
           }
@@ -586,6 +655,7 @@ section.content {
       }
     }
     .matches-container {
+      display: none;
       clear: both;
       width: calc(100% + 25px);
 
@@ -703,4 +773,47 @@ nav {
       }
     }
   }
+}
+
+// Temp for demo
+.demo-link {
+  &.click-photohunt {
+    height: 26%;
+    width: 40%;
+    display: block;
+    position: absolute;
+    top: 13%;
+    left: 50%;
+    margin-left: -43%;
+  }
+  &.click-poll {
+    height: 26%;
+    width: 40%;
+    display: block;
+    position: absolute;
+    top: 13%;
+    left: 50%;
+    margin-left: 4%;
+  }
+  &.click-secondteam {
+    height: 8%;
+    width: 50%;
+    display: block;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    margin-left: 0;
+  }
+  &.click-firstteam {
+    height: 8%;
+    width: 50%;
+    display: block;
+    position: absolute;
+    top: 0%;
+    left: 0;
+    margin-left: 0;
+  }
+}
+.content-poll {
+  padding: 0 !important;
 }

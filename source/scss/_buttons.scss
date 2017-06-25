@@ -34,6 +34,17 @@
     padding-left: 30px;
     padding-right: 30px;
   }
+  &.disabled {
+    @include transition-property(color);
+    @include transition-duration(0.3s);
+    @include transition-timing-function($ease-out-quad);
+    background: #DCDCDC;
+  }
+
+  span {
+    font-size: 14px;
+    font-weight: 300;
+  }
 }
 
 /* Facebook login button */

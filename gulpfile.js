@@ -22,7 +22,8 @@ const paths = {
             directories.src + '/scss/*.scss',
         ],
         vendor: [
-            directories.node + '/foundation-sites/dist/css/foundation.css'
+            directories.node + '/foundation-sites/dist/css/foundation.css',
+            directories.node + '/swiper/dist/css/swiper.css'
         ],
         dest: directories.dest + '/css'
     },
@@ -32,7 +33,8 @@ const paths = {
         ],
         vendor: [
             directories.node + '/jquery/dist/jquery.js',
-            directories.node + '/foundation-sites/dist/js/foundation.js'
+            directories.node + '/foundation-sites/dist/js/foundation.js',
+            directories.node + '/swiper/dist/js/swiper.js'
         ],
         dest: directories.dest + '/js'
     },
