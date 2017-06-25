@@ -41,7 +41,8 @@ const paths = {
     html: {
         src: [
             directories.src + '/*.html',
-            directories.src + '/*.php'
+            directories.src + '/*.php',
+            directories.src + '/*.json'
         ],
         dest: directories.dest
     },
@@ -161,6 +162,7 @@ gulp.task('clean', function (cb) {
         paths.scripts.dest,
         directories.dest + '/*.html',
         directories.dest + '/*.php',
+        directories.dest + '/*.json',
         paths.assets.fonts.dest,
         paths.assets.images.dest,
         paths.assets.svg.dest
